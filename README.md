@@ -2,83 +2,102 @@
 
 ## 🚀 Project Overview
 
-**StudySphere** is an AI-powered educational platform designed to revolutionize how students interact with study materials. Built with **Next.js**, **Flask**, and cutting-edge AI models like **Groq LLaMA**, it enables students to upload textbooks or notes and receive personalized insights such as:
+**StudySphere** is an all-in-one AI-powered study companion built to help learners break down topics, generate flashcards, plan weekly goals, and engage via voice. Designed using **Next.js** and **Groq LLaMA via v0.dev**, StudySphere transforms raw study content into personalized, interactive formats — all hosted serverlessly on **Vercel**.
 
-- 📄 Summaries  
-- 📌 Flashcards  
-- ❓ MCQs  
-- 📘 Concept breakdowns  
-- 🗓️ Study schedules  
-- 🔊 Multilingual voice narration *(upcoming)*
+Students can upload text or topics and instantly receive:
+
+- 📄 Smart concept breakdowns  
+- 🧠 Flashcards, MCQs & deep questions  
+- 🗓️ Personalized weekly study plans  
+- 🎙️ Voice-based interaction *(via StudySuno)*
 
 ---
 
 ## 🎯 Purpose
 
-StudySphere addresses the lack of interactive, personalized, and accessible study tools for diverse learners. Traditional static study methods fail to support individualized pace or comprehension needs.
+StudySphere empowers learners who struggle with static PDFs, linear revision, or time management by offering dynamic, interactive, and voice-enabled tools.
 
-With StudySphere, students can:
-
-- Instantly extract summaries and flashcards from study material  
-- Receive weekly AI-generated study plans  
-- Access multilingual narration *(planned)*  
-- Engage in active recall and structured revision  
+### With StudySphere, learners can:
+- Break down complex topics using **StudyScan**
+- Create flashcards & practice MCQs using **StudyBits**
+- Plan and track progress with **StudyPlan**
+- Interact with AI voice using **StudySuno** *(Speech + TTS)*
 
 ---
 
 ## 🔍 Core Modules
 
-| Module      | Description                                                                    | Tech Used                            |
-|-------------|--------------------------------------------------------------------------------|--------------------------------------|
-| StudyScan   | Extracts text from PDFs and returns summaries, key concepts, and definitions   | Groq LLaMA, PyMuPDF                  |
-| StudyBits   | Converts material into flashcards, MCQs, and short answer questions            | Groq API                             |
-| StudyPlan   | Generates personalized weekly study plans based on syllabus and user goals     | Groq Ollama                          |
-| StudySuno   | *(Upcoming)* Converts content into voice narration in multiple languages       | Microsoft Azure TTS, AssemblyAI      |
+| Module       | Description                                                                 | Tech Stack Used                                   |
+|--------------|-----------------------------------------------------------------------------|--------------------------------------------------|
+| **StudyScan** | Breaks down any topic into weekly learning phases, concepts & resources    | Groq LLaMA (via v0), Structured JSON              |
+| **StudyBits** | Converts text into flashcards, MCQs, and long-answer questions              | Groq LLaMA (via v0), Groq API                     |
+| **StudyPlan** | Builds AI-generated weekly study schedules based on time & difficulty       | Groq Mixtral + LLaMA via v0.dev                   |
+| **StudySuno** | Voice interaction: speech to text + voice responses (multilingual)          | AssemblyAI (STT), Azure Speech (TTS), Clerk Auth  |
 
 ---
 
 ## 🌟 Key Features
 
-- ✅ Page-wise PDF analysis  
+- ✅ Topic-to-syllabus breakdown via AI  
 - ✅ Auto-generated flashcards & MCQs  
-- ✅ Personalized study plans  
-- ✅ Multilingual voice narration *(coming soon)*  
-- ✅ Structured JSON AI output  
-- ✅ Modular, responsive UI with TailwindCSS  
+- ✅ Personalized study planning  
+- ✅ Voice query → spoken answer support  
+- ✅ Supports multiple learning styles (text + audio)  
+- ✅ Structured JSON for consistent rendering  
+- ✅ Deployed & scaled using **Vercel v0.dev**
 
 ---
 
-## 🔧 Tech Stack
+## 🧠 Tech Stack
 
 ### 🎨 Frontend
-- **Next.js** – SSR + API routing  
+- **Next.js** – React-based SSR framework  
 - **Tailwind CSS** – Utility-first styling  
-- **Vercel v0.dev** – Hosting for frontend and serverless backend  
+- **Clerk.dev** – User authentication & session handling  
+- **Vercel v0.dev** – AI-backed generation & full hosting  
 
 ### 🧠 AI & NLP
-- **Groq LLaMA** – Summarization, flashcards, questions, concept breakdowns  
-- **Microsoft Azure Speech Services** – TTS *(planned)*  
-- **AssemblyAI** – Speech-to-text *(planned)*  
+- **Groq LLaMA / Mixtral (via v0)** – For reasoning, breakdowns, questions  
+- **v0.dev** – AI UI + action routing  
+- **Microsoft Azure TTS** – English voice response *(StudySuno)*  
+- **AssemblyAI** – Speech-to-text input understanding *(StudySuno)*  
 
-### 🖥 Backend
-- **Flask** – API logic layer  
-- **PyMuPDF (fitz)** – Fast PDF parsing  
-- **Structured JSON** – Modular frontend rendering  
+### 🔧 Backend / Utilities
+- **Vercel Serverless Functions** – API routes  
+- **Structured JSON** – For frontend data modeling  
+- **No DB (for now)** – Fully stateless (optional: Firebase/Planetscale in future)
 
 ---
 
 ## 🌍 Use Cases
 
 ### ✅ Current
-- **Self-paced learning** – Upload PDFs and get AI-powered content  
-- **Exam prep** – Revise through MCQs and summaries  
-- **Study planning** – Custom schedules using Groq API  
-- **Audio learning** – AI-generated narration *(planned)*  
+- 📘 **Understand any topic** – Break it down by phases and concepts  
+- 🧠 **Revise smarter** – Practice flashcards, MCQs, and recall questions  
+- 📆 **Plan better** – Get AI-generated weekly study goals  
+- 🎤 **Learn by voice** – Ask anything, get spoken answers instantly  
 
-### 🧩 Future
-- 👨‍🏫 Educator tools for batch content  
-- 🤖 StudyBot for real-time doubt solving  
-- 📱 Cross-platform mobile sync  
-- 📊 Learning analytics dashboard  
-- 🔗 Collaborative study rooms  
-- 🗣 Regional & global language support  
+### 🧩 Upcoming
+- 🔗 **Study Rooms** – Collaborate with friends in real time  
+- 📱 **Mobile-first experience** – Optimized PWA or app sync  
+- 👨‍🏫 **Teacher view** – Batch topic upload + student progress  
+- 🧠 **Personalized AI feedback** – Strengths, weak areas, AI tutor suggestions  
+- 🌍 **Full multilingual support** – English + Indian/regional languages
+
+---
+
+## ⚙️ Local Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/studysphere.git
+cd studysphere
+
+# Install dependencies
+npm install
+
+# Add your API keys to `.env.local`
+cp .env.example .env.local
+
+> 🌐 Live: **[StudySphere on Vercel](https://v0-fork-of-study-sphere-v0-requirem-dusky.vercel.app/)**  
+
