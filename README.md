@@ -84,6 +84,8 @@ StudySphere empowers learners who struggle with static PDFs, linear revision, or
 - 🧠 **Personalized AI feedback** – Strengths, weak areas, AI tutor suggestions  
 - 🌍 **Full multilingual support** – English + Indian/regional languages
 
+
+> 🌐 Live: **[StudySphere on Vercel](https://v0-fork-of-study-sphere-v0-requirem-dusky.vercel.app/)**  
 ---
 
 ## ⚙️ Local Setup
@@ -99,5 +101,5 @@ npm install
 # Add your API keys to `.env.local`
 cp .env.example .env.local
 
-> 🌐 Live: **[StudySphere on Vercel](https://v0-fork-of-study-sphere-v0-requirem-dusky.vercel.app/)**  
+
 
